@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Арома - Кав'ярня в Ужгороді</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-stone-50 text-stone-800 font-sans antialiased">
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-stone-200 h-20 flex items-center shadow-sm">
+        <div class="max-w-6xl mx-auto px-6 w-full flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold tracking-wider text-amber-900 flex items-center gap-2">
+                <i class="fa-solid fa-mug-hot text-amber-600"></i> Арома
+            </a>
+            <nav class="hidden md:flex gap-2 items-center font-medium">
+                <a href="index.html" class="bg-amber-500 text-white rounded-lg px-4 py-2 transition">Головна</a>
+                <a href="about.html" class="hover:bg-amber-50 text-stone-700 rounded-lg px-4 py-2 transition">Про нас</a>
+                <a href="services.html" class="hover:bg-amber-50 text-stone-700 rounded-lg px-4 py-2 transition">Меню</a>
+                <a href="gallery.html" class="hover:bg-amber-50 text-stone-700 rounded-lg px-4 py-2 transition">Галерея</a>
+                <a href="booking.html" class="hover:bg-amber-50 text-stone-700 rounded-lg px-4 py-2 transition">Бронювання</a>
+                <a href="contacts.html" class="hover:bg-amber-50 text-stone-700 rounded-lg px-4 py-2 transition">Контакти</a>
+            </nav>
+            <button class="md:hidden text-2xl text-stone-700" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-stone-200 px-6 py-4 space-y-2">
+        <a href="index.html" class="block bg-amber-500 text-white rounded-lg px-4 py-2">Головна</a>
+        <a href="about.html" class="block hover:bg-amber-50 rounded-lg px-4 py-2">Про нас</a>
+        <a href="services.html" class="block hover:bg-amber-50 rounded-lg px-4 py-2">Меню</a>
+        <a href="gallery.html" class="block hover:bg-amber-50 rounded-lg px-4 py-2">Галерея</a>
+        <a href="booking.html" class="block hover:bg-amber-50 rounded-lg px-4 py-2">Бронювання</a>
+        <a href="contacts.html" class="block hover:bg-amber-50 rounded-lg px-4 py-2">Контакти</a>
+    </div>
+
+    <main>
+        <section class="min-h-[80vh] relative bg-cover bg-center flex items-center justify-center text-center px-6" style="background-image: url('https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1920&q=80')">
+            <div class="absolute inset-0 bg-black/50"></div>
+            <div class="relative z-10 max-w-4xl mx-auto text-white space-y-6">
+                <div class="text-sm uppercase tracking-widest text-amber-400 font-semibold">Православна набережна, 21, Ужгород</div>
+                <h1 class="text-4xl md:text-6xl font-bold tracking-tight leading-tight">Кав'ярня «Арома» на Православній набережній в Ужгороді</h1>
+                <p class="text-lg md:text-xl text-stone-200 max-w-2xl mx-auto">Затишне місце з чарівним краєвидом на річку Уж, ароматною кавою та свіжими десертами</p>
+                <div class="pt-4 flex flex-wrap justify-center gap-4">
+                    <a href="booking.html" class="bg-amber-500 hover:bg-amber-600 text-white px-8 py-4 rounded-xl text-lg font-semibold shadow-2xl transition">Забронювати столик</a>
+                    <a href="services.html" class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 px-8 py-4 rounded-xl text-lg font-semibold transition">Переглянути меню</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 px-6 max-w-6xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                <h2 class="text-3xl font-bold text-stone-900">Популярні позиції</h2>
+                <p class="text-stone-600">Спробуйте улюблені смаколики наших гостей</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden border border-stone-100 flex flex-col">
+                    <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=600&q=80" alt="Капучіно" class="w-full h-56 object-cover">
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-semibold text-amber-600 uppercase tracking-wider">Кавові напої</span>
+                            <h3 class="text-xl font-bold text-stone-900 mt-1">Капучіно</h3>
+                            <p class="text-stone-600 mt-2 text-sm">Класичний кавово-молочний напій із ніжною пінкою</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden border border-stone-100 flex flex-col">
+                    <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=600&q=80" alt="Торт Медовий" class="w-full h-56 object-cover">
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-semibold text-amber-600 uppercase tracking-wider">Десерти</span>
+                            <h3 class="text-xl font-bold text-stone-900 mt-1">Торт «Медовий»</h3>
+                            <p class="text-stone-600 mt-2 text-sm">Фірмовий домашній медовий десерт</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden border border-stone-100 flex flex-col">
+                    <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=600&q=80" alt="Домашній чай" class="w-full h-56 object-cover">
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-semibold text-amber-600 uppercase tracking-wider">Гарячі напої</span>
+                            <h3 class="text-xl font-bold text-stone-900 mt-1">Домашній чай</h3>
+                            <p class="text-stone-600 mt-2 text-sm">Ароматні фірмові чаї власного приготування</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-amber-900 text-stone-100 py-20 px-6">
+            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-3xl font-bold">Затишок на березі річки Уж</h2>
+                    <p class="text-stone-300 leading-relaxed">Кав'ярня «Арома» розташована в мальовничому куточку Ужгорода. Це ідеальне місце, де можна насолодитися спокоєм, спостерігаючи за качками на воді, або відпочити на просторій терасі з чашкою улюбленої кави.</p>
+                    <a href="about.html" class="inline-block bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-xl font-semibold transition">Дізнатися більше</a>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=600&q=80" alt="Інтер'єр" class="rounded-2xl object-cover h-64 w-full shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=600&q=80" alt="Тераса" class="rounded-2xl object-cover h-64 w-full shadow-lg mt-8">
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 px-6 max-w-6xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                <h2 class="text-3xl font-bold text-stone-900">Відгуки наших гостей</h2>
+                <p class="text-stone-600">Що кажуть відвідувачі про «Арому»</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-stone-100 flex flex-col justify-between space-y-4">
+                    <div class="flex items-center gap-1 text-amber-500">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-stone-700 italic">"Адекватні ціни, нормальне обслуговування, приємний вид на річку Уж. Є тортики, капучіно, кава. І гарний доглянутий кролик. Рекомендую! Є тераса, величезний плюс. Сама локація просто прекрасна. П’єш каву і дивишся на качок, які плавають по річці! Супер"</p>
+                    <div class="flex justify-between items-center text-sm text-stone-500 border-t pt-4 border-stone-100">
+                        <span class="font-semibold text-stone-900">Lenochka Kirillova</span>
+                        <span>Google Maps</span>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-stone-100 flex flex-col justify-between space-y-4">
+                    <div class="flex items-center gap-1 text-amber-500">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-stone-700 italic">"Чудове кафе на березі річки Уж біля обласної прокуратури. Гарний краєвид на річку. Ввічливий персонал."</p>
+                    <div class="flex justify-between items-center text-sm text-stone-500 border-t pt-4 border-stone-100">
+                        <span class="font-semibold text-stone-900">Григорий Смоляков</span>
+                        <span>Google Maps</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-stone-900 text-stone-300 py-12 px-6 border-t border-stone-800">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="space-y-4">
+                <h3 class="text-xl font-bold text-white flex items-center gap-2">
+                    <i class="fa-solid fa-mug-hot text-amber-500"></i> Арома
+                </h3>
+                <p class="text-sm text-stone-400">Затишна кав'ярня в Ужгороді з чудовим видом на річку Уж та смачною кавою.</p>
+            </div>
+            <div class="space-y-4">
+                <h4 class="text-lg font-semibold text-white">Контакти</h4>
+                <p class="text-sm text-stone-400"><i class="fa-solid fa-location-dot mr-2 text-amber-500"></i> Православна набережна, 21, Ужгород</p>
+                <p class="text-sm text-stone-400"><i class="fa-solid fa-phone mr-2 text-amber-500"></i> +380995666907</p>
+                <p class="text-sm text-stone-400"><i class="fa-solid fa-envelope mr-2 text-amber-500"></i> info@aroma-uzhhorod.ua</p>
+            </div>
+            <div class="space-y-4">
+                <h4 class="text-lg font-semibold text-white">Соціальні мережі</h4>
+                <div class="flex gap-4">
+                    <a href="https://www.instagram.com/aroma_uzhhorod/" target="_blank" class="w-10 h-10 rounded-full bg-stone-800 flex items-center justify-center text-amber-500 hover:bg-amber-500 hover:text-white transition">
+                        <i class="fa-brands fa-instagram text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto mt-12 pt-6 border-t border-stone-800 text-center text-xs text-stone-500">
+            &copy; 2024 Кав'ярня «Арома». Усі права захищені.
+        </div>
+    </footer>
+<script>
+    document.getElementById('mobile-toggle')?.addEventListener('click', function() {
+      document.getElementById('mobile-menu')?.classList.toggle('hidden');
+    });
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+      });
+    });
+  </script>
+</body>
+</html>"},{"path":"about.html","content":"<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Про нас - Арома Ужгород</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-stone-50 text-stone-800 font-sans antialiased">
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-stone-200 h-20 flex items-center shadow-sm">
+        <div class="max-w-6xl mx-auto px-6 w-full flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold tracking-wider text-amber-900 flex items-center gap-2">
+                <i class="fa-solid fa-mug-hot text-amber-600"></i> Арома
+            </a>
+            <nav class="hidden md:flex gap-2 items-center font-medium">
+                <a href="index.html" class="hover:bg-amber-50 text-stone-700 rounded-lg px-4 py-2 transition">Головна</a>
+                <a href="about.html" class="bg-amber-500 text-white rounded-lg px-4 py-2 transition">Про нас</a>
+                <a href="services.html" class="hover:bg-amber-50 text-stone-700 rounded-lg px-4 py-2 transition">Меню</a>
+                <a href="gallery.html" class="hover:bg-amber-50 text-stone-700 rounded-lg px-4 py-2 transition">Галерея</a>
+                <a href="booking.html" class="hover:bg-amber-50 text-stone-700 rounded-lg px-4 py-2 transition">Бронювання</a>
+                <a href="contacts.html" class="hover:bg-amber-50 text-stone-700 rounded-lg px-4 py-2 transition">Контакти</a>
+            </nav>
+            <button class="md:hidden text-2xl text-stone-700" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-stone-200 px-6 py-4 space-y-2">
+        <a href="index.html" class="block hover:bg-amber-50 rounded-lg px-4 py-2">Головна</a>
+        <a href="about.html" class="block bg-amber-500 text-white rounded-lg px-4 py-2">Про нас</a>
+        <a href="services.html" class="block hover:bg-amber-50 rounded-lg px-4 py-2">Меню</a>
+        <a href="gallery.html" class="block hover:bg-amber-50 rounded-lg px-4 py-2">Галерея</a>
+        <a href="booking.html" class="block hover:bg-amber-50 rounded-lg px-4 py-2">Бронювання</a>
+        <a href="contacts.html" class="block hover:bg-amber-50 rounded-lg px-4 py-2">Контакти</a>
+    </div>
+
+    <div class="bg-stone-100 py-4 border-b border-stone-200">
+        <div class="max-w-6xl mx-auto px-6 text-sm text-stone-600">
+            <a href="index.html" class="hover:text-amber-600">Головна</a> > <span class="text-stone-900 font-semibold">Про нас</span>
+        </div>
+    </div>
+
+    <main class="py-20 px-6 max-w-6xl mx-auto space-y-16">
+        <div class="text-center max-w-3xl mx-auto space-y-4">
+            <h1 class="text-4xl font-bold text-stone-900">Про кав'ярню «Арома»</h1>
+            <p class="text-lg text-stone-600">Дізнайтеся більше про нашу історію, атмосферу та унікальні особливості</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6 text-stone-700 leading-relaxed text-lg">
+                <p>Кав'ярня «Арома» розташована в мальовничому куточку Ужгорода на Православній набережній, 21, поруч з обласною прокуратурою. Це затишний заклад із чудовим краєвидом на річку Уж, де можна насолодитися спокоєм, спостерігаючи за качками на воді, або відпочити на просторій терасі. Гостям пропонують широкий асортимент кавових напоїв, ароматних чаїв та свіжих тістечок і десертів.</p>
+                <p>Заклад вирізняється приємною та дружньою атмосферою, ввічливим персоналом та адекватними цінами. Завдяки вдалій локації на набережній, «Арома» є улюбленим місцем для зустрічей із друзями, сімейного відпочинку чи затишної кавової паузи на свіжому повітрі. Відвідувачі особливо цінують затишок внутрішнього простору, чистоту та мальовничі краєвиди Закарпаття.</p>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=600&q=80" alt="Арома екстер'єр" class="rounded-2xl shadow-xl object-cover h-72 w-full">
+                <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&q=80" alt="Кава в Арома" class="rounded-2xl shadow-xl object-cover h-72 w-full mt-8">
+            </div>
+        </div>
+
+        <div class="bg-white rounded-3xl shadow-xl p-10 border border-stone-100">
+            <h2 class="text-2xl font-bold text-stone-900 mb-8 text-center">Чому обирають нас</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-stone-50 p-6 rounded-2xl border border-stone-100 space-y-3">
+                    <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-water"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-stone-900">Мальовнича локація</h3>
+                    <p class="text-stone-600 text-sm">Розташована на мальовничій Православній набережній з видом на річку Уж</p>
+                </div>
+                <div class="bg-stone-50 p-6 rounded-2xl border border-stone-100 space-y-3">
+                    <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-umbrella-beach"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-stone-900">Літня тераса</h3>
+                    <p class="text-stone-600 text-sm">Має затишну літню терасу для відпочинку на свіжому повітрі</p>
+                </div>
+                <div class="bg-stone-50 p-6 rounded-2xl border border-stone-100 space-y-3">
+                    <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-paw"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-stone-900">Живий кролик</h3>
+                    <p class="text-stone-600 text-sm">У закладі мешкає доглянутий живий кролик, який приваблює відвідувачів</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-stone-900 text-stone-300 py-12 px-6 border-t border-stone-800">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="space-y-4">
+                <h3 class="text-xl font-bold text-white flex items-center gap-2">
+                    <i class="fa-solid fa-mug-hot text-amber-500"></i> Арома
+                </h3>
+                <p class="text-sm text-stone-400">Затишна кав'ярня в Ужгороді з чудовим видом на річку Уж та смачною кавою.</p>
+            </div>
+            <div class="space-y-4">
+                <h4 class="text-lg font-semibold text-white">Контакти</h4>
+                <p class="text-sm text-stone-400"><i class="fa-solid fa-location-dot mr-2 text-amber-500"></i> Православна набережна, 21, Ужгород</p>
+                <p class="text-sm text-stone-400"><i class="fa-solid fa-phone mr-2 text-amber-500"></i> +380995666907</p>
+                <p class="text-sm text-stone-400"><i class="fa-solid fa-envelope mr-2 text-amber-500"></i> info@aroma-uzhhorod.ua</p>
+            </div>
+            <div class="space-y-4">
+                <h4 class="text-lg font-semibold text-white">Соціальні мережі</h4>
+                <div class="flex gap-4">
+                    <a href="https://www.instagram.com/aroma_uzhhorod/" target="_blank" class="w-10 h-10 rounded-full bg-stone-800 flex items-center justify-center text-amber-500 hover:bg-amber-500 hover:text-white transition">
+                        <i class="fa-brands fa-instagram text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto mt-12 pt-6 border-t border-stone-800 text-center text-xs text-stone-500">
+            &copy; 2024 Кав'ярня «Арома». Усі права захищені.
+        </div>
+    </footer>
+</body>
+</html>"},{"path":"services.html","content":"<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню - Арома Ужгород</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-stone-50 text-stone-800 font-sans antialiased">
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-stone-200 h-20 flex items-center shadow-sm">
+        <div class="max-w-6xl mx-auto px-6 w-full flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold tracking-wider text-amber-900 flex items-center gap-2">
+                <i class="fa-solid fa-mug-hot text-amber-600"></i> Арома
+            </a>
+            <nav class="hidden md:flex gap-2 items-center font-medium">
+                <a href="index.html" class="hover:bg-amber-50 text-stone-700 rounded-lg px-4 py-2 transition">Головна</a>
+                <a href="about.html" class="hover:bg-amber-50 text-stone-700 rounded-lg px-4 py-2 transition">Про нас</a>
+                <a href="services.html" class="bg-amber-500 text-white rounded-lg px-4 py-2 transition">Меню</a>
+                <a href="gallery.html" class="hover:bg-amber-50 text-stone-700 rounded-lg px-4 py-2 transition">Галерея</a>
+                <a href="booking.html" class="hover:bg-amber-50 text-stone-700 rounded-lg px-4 py-2 transition">Бронювання</a>
+                <a href="contacts.html" class="hover:bg-amber-50 text-stone-700 rounded-lg px-4 py-2 transition">Контакти</a>
+            </nav>
+            <button class="md:hidden text-2xl text-stone-700" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-stone-200 px-6 py-4 space-y-2">
+        <a href="index.html" class="block hover:bg-amber-50 rounded-lg px-4 py-2">Головна</a>
+        <a href="about.html" class="block hover:bg-amber-50 rounded-lg px-4 py-2">Про нас</a>
+        <a href="services.html" class="block bg-amber-500 text-white rounded-lg px-4 py-2">Меню</a>
+        <a href="gallery.html" class="block hover:bg-amber-50 rounded-lg px-4 py-2">Галерея</a>
+        <a href="booking.html" class="block hover:bg-amber-50 rounded-lg px-4 py-2">Бронювання</a>
+        <a href="contacts.html" class="block hover:bg-amber-50 rounded-lg px-4 py-2">Контакти</a>
+    </div>
+
+    <div class="bg-stone-100 py-4 border-b border-stone-200">
+        <div class="max-w-6xl mx-auto px-6 text-sm text-stone-600">
+            <a href="index.html" class="hover:text-amber-600">Головна</a> > <span class="text-stone-900 font-semibold">Меню</span>
+        </div>
+    </div>
+
+    <main class="py-20 px-6 max-w-6xl mx-auto space-y-16">
+        <div class="text-center max-w-3xl mx-auto space-y-4">
+            <h1 class="text-4xl font-bold text-stone-900">Наше меню</h1>
+            <p class="text-lg text-stone-600">Свіжа кава, ароматні чаї та ніжні десерти для вашого задоволення</p>
+        </div>
+
+        <div class="space-y-12">
+            <div>
+                <h2 class="text-2xl font-bold text-amber-900 mb-6 flex items-center gap-3 border-b pb-3 border-stone-200">
+                    <i class="fa-solid fa-coffee text-amber-600"></i> Кавові напої
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden border border-stone-100 flex flex-col">
+                        <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=600&q=80" alt="Капучіно" class="w-full h-56 object-cover">
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-xl font-bold text-stone-900">Капучіно</h3>
+                                <p class="text-stone-600 mt-2 text-sm">Класичний кавово-молочний напій із ніжною пінкою</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden border border-stone-100 flex flex-col">
+                        <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80" alt="Еспресо" class="w-full h-56 object-cover">
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-xl font-bold text-stone-900">Еспресо</h3>
+                                <p class="text-stone-600 mt-2 text-sm">Ароматна класична міцна кава</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden border border-stone-100 flex flex-col">
+                        <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=600&q=80" alt="Лате" class="w-full h-56 object-cover">
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-xl font-bold text-stone-900">Лате</h3>
+                                <p class="text-stone-600 mt-2 text-sm">Ніжний кавовий напій з великою кількістю молока</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h2 class="text-2xl font-bold text-amber-900 mb-6 flex items-center gap-3 border-b pb-3 border-stone-200">
+                    <i class="fa-solid fa-cake-candles text-amber-600"></i> Десерти
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden border border-stone-100 flex flex-col">
+                        <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=600&q=80" alt="Торт Медовий" class="w-full h-56 object-cover">
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-xl font-bold text-stone-900">Торт «Медовий»</h3>
+                                <p class="text-stone-600 mt-2 text-sm">Фірмовий домашній медовий десерт</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden border border-stone-100 flex flex-col">
+                        <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=600&q=80" alt="Шоколадний десерт" class="w-full h-56 object-cover">
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-xl font-bold text-stone-900">Шоколадний тістечко</h3>
+                                <p class="text-stone-600 mt-2 text-sm">Ніжний десерт для справжніх гурманів</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h2 class="text-2xl font-bold text-amber-900 mb-6 flex items-center gap-3 border-b pb-3 border-stone-200">
+                    <i class="fa-solid fa-mug-saucer text-amber-600"></i> Гарячі напої
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden border border-stone-100 flex flex-col">
+                        <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=600&q=80" alt="Домашній чай" class="w-full h-56 object-cover">
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-xl font-bold text-stone-900">Домашній чай</h3>
+                                <p class="text-stone-600 mt-2 text-sm">Ароматні фірмові чаї власного приготування</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-stone-900 text-stone-300 py-12 px-6 border-t border-stone-800">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="space-y-4">
+                <h3 class="text-xl font-bold text-white flex items-center gap-2">
+                    <i class="fa-solid fa-mug-hot text-amber-500"></i> Арома
+                </h3>
+                <p class="text-sm text-stone-400">Затишна кав'ярня в Ужгороді з чудовим видом на річку Уж та смачною кавою.</p>
+            </div>
+            <div class="space-y-4">
+                <h4 class="text-lg font-semibold text-white">Контакти</h4>
+                <p class="text-sm text-stone-400"><i class="fa-solid fa-location-dot mr-2 text-amber-500"></i> Православна набережна, 21, Ужгород</p>
+                <p class="text-sm text-stone-400"><i class="fa-solid fa-phone mr-2 text-amber-500"></i> +380995666907</p>
+                <p class="text-sm text-stone-400"><i class="fa-solid fa-envelope mr-2 text-amber-500"></i> info@aroma-uzhhorod.ua</p>
+            </div>
+            <div class="space-y-4">
+                <h4 class="text-lg font-semibold text-white">Соціальні мережі</h4>
+                <div class="flex gap-4">
+                    <a href="https://www.instagram.com/aroma_uzhhorod/" target="_blank" class="w-10 h-10 rounded-full bg-stone-800 flex items-center justify-center text-amber-500 hover:bg-amber-500 hover:text-white transition">
+                        <i class="fa-brands fa-instagram text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto mt-12 pt-6 border-t border-stone-800 text-center text-xs text-stone-500">
+            &copy; 2024 Кав'ярня «Арома». Усі права захищені.
+        </div>
+    </footer>
+</body>
+</html>"},{"path":"gallery.html","content":"<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея - Арома Ужгород</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-stone-50 text-stone-800 font-sans antialiased">
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-stone-200 h-20 flex items-center shadow-sm">
+        <div class="max-w-6xl mx-auto px-6 w-full flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold tracking-wider text-amber-900 flex items-center gap-2">
+                <i class="fa-solid fa-mug-hot text-amber-600"></i> Арома
+            </a>
+            <nav class="hidden md:flex gap-2 items-center font-medium">
+                <a href="index.html" class="hover:bg-amber-50 text-stone-700 rounded-lg px-4 py-2 transition">Головна</a>
+                <a href="about.html" class="hover:bg-amber-50 text-stone-700 rounded-lg px-4 py-2 transition">Про нас</a>
+                <a href="services.html" class="hover:bg-amber-50 text-stone-700 rounded-lg px-4 py-2 transition">Меню</a>
+                <a href="gallery.html" class="bg-amber-500 text-white rounded-lg px-4 py-2 transition">Галерея</a>
+                <a href="booking.html" class="hover:bg-amber-50 text-stone-700 rounded-lg px-4 py-2 transition">Бронювання</a>
+                <a href="contacts.html" class="hover:bg-amber-50 text-stone-700 rounded-lg px-4 py-2 transition">Контакти</a>
+            </nav>
+            <button class="md:hidden text-2xl text-stone-700" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-stone-200 px-6 py-4 space-y-2">
+        <a href="index.html" class="block hover:bg-amber-50 rounded-lg px-4 py-2">Головна</a>
+        <a href="about.html" class="block hover:bg-amber-50 rounded-lg px-4 py-2">Про нас</a>
+        <a href="services.html" class="block hover:bg-amber-50 rounded-lg px-4 py-2">Меню</a>
+        <a href="gallery.html" class="block bg-amber-500 text-white rounded-lg px-4 py-2">Галерея</a>
+        <a href="booking.html" class="block hover:bg-amber-50 rounded-lg px-4 py-2">Бронювання</a>
+        <a href="contacts.html" class="block hover:bg-amber-50 rounded-lg px-4 py-2">Контакти</a>
+    </div>
+
+    <div class="bg-stone-100 py-4 border-b border-stone-200">
+        <div class="max-w-6xl mx-auto px-6 text-sm text-stone-600">
+            <a href="index.html" class="hover:text-amber-600">Головна</a> > <span class="text-stone-900 font-semibold">Галерея</span>
+        </div>
+    </div>
+
+    <main class="py-20 px-6 max-w-6xl mx-auto space-y-16">
+        <div class="text-center max-w-3xl mx-auto space-y-4">
+            <h1 class="text-4xl font-bold text-stone-900">Фотогалерея</h1>
+            <p class="text-lg text-stone-600"> atmosfera, краєвиди та затишні куточки кав'ярні «Арома»</p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+            <div class="aspect-square overflow-hidden rounded-2xl shadow-lg bg-stone-200">
+                <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=800&q=80" alt="Фото 1" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="aspect-square overflow-hidden rounded-2xl shadow-lg bg-stone-200">
+                <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=800&q=80" alt="Фото 2" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="aspect-square overflow-hidden rounded-2xl shadow-lg bg-stone-200">
+                <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80" alt="Фото 3" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="aspect-square overflow-hidden rounded-2xl shadow-lg bg-stone-200">
+                <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80" alt="Фото 4" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="aspect-square overflow-hidden rounded-2xl shadow-lg bg-stone-200">
+                <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=800&q=80" alt="Фото 5" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="aspect-square overflow-hidden rounded-2xl shadow-lg bg-stone-200">
+                <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=800&q=80" alt="Фото 6" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-stone-900 text-stone-300 py-12 px-6 border-t border-stone-800">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="space-y-4">
+                <h3 class="text-xl font-bold text-white flex items-center gap-2">
+                    <i class="fa-solid fa-mug-hot text-amber-500"></i> Арома
+                </h3>
+                <p class="text-sm text-stone-400">Затишна кав'ярня в Ужгороді з чудовим видом на річку Уж та смачною кавою.</p>
+            </div>
+            <div class="space-y-4">
+                <h4 class="text-lg font-semibold text-white">Контакти</h4>
+                <p class="text-sm text-stone-400"><i class="fa-solid fa-location-dot mr-2 text-amber-500"></i> Православна набережна, 21, Ужгород</p>
+                <p class="text-sm text-stone-400"><i class="fa-solid fa-phone mr-2 text-amber-500"></i> +380995666907</p>
+                <p class="text-sm text-stone-400"><i class="fa-solid fa-envelope mr-2 text-amber-500"></i> info@aroma-uzhhorod.ua</p>
+            </div>
+            <div class="space-y-4">
+                <h4 class="text-lg font-semibold text-white">Соціальні мережі</h4>
+                <div class="flex gap-4">
+                    <a href="https://www.instagram.com/aroma_uzhhorod/" target="_blank" class="w-10 h-10 rounded-full bg-stone-800 flex items-center justify-center text-amber-500 hover:bg-amber-500 hover:text-white transition">
+                        <i class="fa-brands fa-instagram text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto mt-12 pt-6 border-t border-stone-800 text-center text-xs text-stone-500">
+            &copy; 2024 Кав'ярня «Арома». Усі права захищені.
+        </div>
+    </footer>
+</body>
+</html>"},{"path":"booking.html","content":"<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бронювання - Арома Ужгород</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-stone-50 text-stone-800 font-sans antialiased">
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-stone-200 h-20 flex items-center shadow-sm">
+        <div class="max-w-6xl mx-auto px-6 w-full flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold tracking-wider text-amber-900 flex items-center gap-2">
+                <i class="fa-solid fa-mug-hot text-amber-600"></i> Арома
+            </a>
+            <nav class="hidden md:flex gap-2 items-center font-medium">
+                <a href="index.html" class="hover:bg-amber-50 text-stone-700 rounded-lg px-4 py-2 transition">Головна</a>
+                <a href="about.html" class="hover:bg-amber-50 text-stone-700 rounded-lg px-4 py-2 transition">Про нас</a>
+                <a href="services.html" class="hover:bg-amber-50 text-stone-700 rounded-lg px-4 py-2 transition">Меню</a>
+                <a href="gallery.html" class="hover:bg-amber-50 text-stone-700 rounded-lg px-4 py-2 transition">Галерея</a>
+                <a href="booking.html" class="bg-amber-500 text-white rounded-lg px-4 py-2 transition">Бронювання</a>
+                <a href="contacts.html" class="hover:bg-amber-50 text-stone-700 rounded-lg px-4 py-2 transition">Контакти</a>
+            </nav>
+            <button class="md:hidden text-2xl text-stone-700" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-stone-200 px-6 py-4 space-y-2">
+        <a href="index.html" class="block hover:bg-amber-50 rounded-lg px-4 py-2">Головна</a>
+        <a href="about.html" class="block hover:bg-amber-50 rounded-lg px-4 py-2">Про нас</a>
+        <a href="services.html" class="block hover:bg-amber-50 rounded-lg px-4 py-2">Меню</a>
+        <a href="gallery.html" class="block hover:bg-amber-50 rounded-lg px-4 py-2">Галерея</a>
+        <a href="booking.html" class="block bg-amber-500 text-white rounded-lg px-4 py-2">Бронювання</a>
+        <a href="contacts.html" class="block hover:bg-amber-50 rounded-lg px-4 py-2">Контакти</a>
+    </div>
+
+    <div class="bg-stone-100 py-4 border-b border-stone-200">
+        <div class="max-w-6xl mx-auto px-6 text-sm text-stone-600">
+            <a href="index.html" class="hover:text-amber-600">Головна</a> > <span class="text-stone-900 font-semibold">Бронювання</span>
+        </div>
+    </div>
+
+    <main class="py-20 px-6 max-w-4xl mx-auto">
+        <div class="max-w-2xl mx-auto bg-white rounded-3xl shadow-2xl p-10 border border-stone-100">
+            <div class="text-center space-y-3 mb-8">
+                <h1 class="text-3xl font-bold text-stone-900">Забронювати столик</h1>
+                <p class="text-stone-600">Заповніть форму, і ми зв'яжемося з вами для підтвердження</p>
+            </div>
+            
+            <form action="https://formsubmit.co/info@aroma-uzhhorod.ua" method="POST" class="space-y-6">
+                <div class="space-y-2">
+                    <label class="block text-sm font-semibold text-stone-700">Ваше ім'я</label>
+                    <input type="text" name="name" required class="w-full px-5 py-4 border-2 border-gray-200 rounded-xl focus:border-amber-500 focus:ring-4 focus:ring-amber-100 outline-none transition" placeholder="Введіть ваше ім'я">
+                </div>
+                <div class="space-y-2">
+                    <label class="block text-sm font-semibold text-stone-700">Номер телефону</label>
+                    <input type="tel" name="phone" required class="w-full px-5 py-4 border-2 border-gray-200 rounded-xl focus:border-amber-500 focus:ring-4 focus:ring-amber-100 outline-none transition" placeholder="+380...">
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="space-y-2">
+                        <label class="block text-sm font-semibold text-stone-700">Дата</label>
+                        <input type="date" name="date" required class="w-full px-5 py-4 border-2 border-gray-200 rounded-xl focus:border-amber-500 focus:ring-4 focus:ring-amber-100 outline-none transition">
+                    </div>
+                    <div class="space-y-2">
+                        <label class="block text-sm font-semibold text-stone-700">Час</label>
+                        <input type="time" name="time" required class="w-full px-5 py-4 border-2 border-gray-200 rounded-xl focus:border-amber-500 focus:ring-4 focus:ring-amber-100 outline-none transition">
+                    </div>
+                </div>
+                <div class="space-y-2">
+                    <label class="block text-sm font-semibold text-stone-700">Кількість гостей</label>
+                    <select name="guests" class="w-full px-5 py-4 border-2 border-gray-200 rounded-xl focus:border-amber-500 focus:ring-4 focus:ring-amber-100 outline-none transition">
+                        <option value="1">1 гість</option>
+                        <option value="2">2 гостей</option>
+                        <option value="3">3 гостей</option>
+                        <option value="4">4 гостей</option>
+                        <option value="5+">5+ гостей</option>
+                    </select>
+                </div>
+                <button type="submit" class="w-full bg-gradient-to-r from-amber-500 to-orange-500 text-white py-5 rounded-xl text-lg font-bold hover:shadow-xl transition">Забронювати</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="bg-stone-900 text-stone-300 py-12 px-6 border-t border-stone-800">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="space-y-4">
+                <h3 class="text-xl font-bold text-white flex items-center gap-2">
+                    <i class="fa-solid fa-mug-hot text-amber-500"></i> Арома
+                </h3>
+                <p class="text-sm text-stone-400">Затишна кав'ярня в Ужгороді з чудовим видом на річку Уж та смачною кавою.</p>
+            </div>
+            <div class="space-y-4">
+                <h4 class="text-lg font-semibold text-white">Контакти</h4>
+                <p class="text-sm text-stone-400"><i class="fa-solid fa-location-dot mr-2 text-amber-500"></i> Православна набережна, 21, Ужгород</p>
+                <p class="text-sm text-stone-400"><i class="fa-solid fa-phone mr-2 text-amber-500"></i> +380995666907</p>
+                <p class="text-sm text-stone-400"><i class="fa-solid fa-envelope mr-2 text-amber-500"></i> info@aroma-uzhhorod.ua</p>
+            </div>
+            <div class="space-y-4">
+                <h4 class="text-lg font-semibold text-white">Соціальні мережі</h4>
+                <div class="flex gap-4">
+                    <a href="https://www.instagram.com/aroma_uzhhorod/" target="_blank" class="w-10 h-10 rounded-full bg-stone-800 flex items-center justify-center text-amber-500 hover:bg-amber-500 hover:text-white transition">
+                        <i class="fa-brands fa-instagram text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto mt-12 pt-6 border-t border-stone-800 text-center text-xs text-stone-500">
+            &copy; 2024 Кав'ярня «Арома». Усі права захищені.
+        </div>
+    </footer>
+</body>
+</html>"},{"path":"contacts.html","content":"<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакти - Арома Ужгород</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-stone-50 text-stone-800 font-sans antialiased">
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-stone-200 h-20 flex items-center shadow-sm">
+        <div class="max-w-6xl mx-auto px-6 w-full flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold tracking-wider text-amber-900 flex items-center gap-2">
+                <i class="fa-solid fa-mug-hot text-amber-600"></i> Арома
+            </a>
+            <nav class="hidden md:flex gap-2 items-center font-medium">
+                <a href="index.html" class="hover:bg-amber-50 text-stone-700 rounded-lg px-4 py-2 transition">Головна</a>
+                <a href="about.html" class="hover:bg-amber-50 text-stone-700 rounded-lg px-4 py-2 transition">Про нас</a>
+                <a href="services.html" class="hover:bg-amber-50 text-stone-700 rounded-lg px-4 py-2 transition">Меню</a>
+                <a href="gallery.html" class="hover:bg-amber-50 text-stone-700 rounded-lg px-4 py-2 transition">Галерея</a>
+                <a href="booking.html" class="hover:bg-amber-50 text-stone-700 rounded-lg px-4 py-2 transition">Бронювання</a>
+                <a href="contacts.html" class="bg-amber-500 text-white rounded-lg px-4 py-2 transition">Контакти</a>
+            </nav>
+            <button class="md:hidden text-2xl text-stone-700" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-stone-200 px-6 py-4 space-y-2">
+        <a href="index.html" class="block hover:bg-amber-50 rounded-lg px-4 py-2">Головна</a>
+        <a href="about.html" class="block hover:bg-amber-50 rounded-lg px-4 py-2">Про нас</a>
+        <a href="services.html" class="block hover:bg-amber-50 rounded-lg px-4 py-2">Меню</a>
+        <a href="gallery.html" class="block hover:bg-amber-50 rounded-lg px-4 py-2">Галерея</a>
+        <a href="booking.html" class="block hover:bg-amber-50 rounded-lg px-4 py-2">Бронювання</a>
+        <a href="contacts.html" class="block bg-amber-500 text-white rounded-lg px-4 py-2">Контакти</a>
+    </div>
+
+    <div class="bg-stone-100 py-4 border-b border-stone-200">
+        <div class="max-w-6xl mx-auto px-6 text-sm text-stone-600">
+            <a href="index.html" class="hover:text-amber-600">Головна</a> > <span class="text-stone-900 font-semibold">Контакти</span>
+        </div>
+    </div>
+
+    <main class="py-20 px-6 max-w-6xl mx-auto space-y-16">
+        <div class="text-center max-w-3xl mx-auto space-y-4">
+            <h1 class="text-4xl font-bold text-stone-900">Контакти</h1>
+            <p class="text-lg text-stone-600">Зв'яжіться з нами або завітайте до нашої кав'ярні</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+            <div class="bg-white rounded-3xl shadow-xl p-8 border border-stone-100 space-y-8">
+                <h2 class="text-2xl font-bold text-stone-900">Наші координати</h2>
+                <div class="space-y-6">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-xl shrink-0">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-stone-900">Адреса</h3>
+                            <p class="text-stone-600 mt-1">Православна набережна, 21, Ужгород, Закарпатська область, 88000</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-xl shrink-0">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-stone-900">Телефон</h3>
+                            <p class="text-stone-600 mt-1">+380995666907</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-xl shrink-0">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-stone-900">Email</h3>
+                            <p class="text-stone-600 mt-1">info@aroma-uzhhorod.ua</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-xl shrink-0">
+                            <i class="fa-solid fa-share-nodes"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-stone-900">Соцмережі</h3>
+                            <div class="mt-2">
+                                <a href="https://www.instagram.com/aroma_uzhhorod/" target="_blank" class="inline-flex items-center gap-2 text-amber-600 hover:text-amber-700 font-medium">
+                                    <i class="fa-brands fa-instagram text-xl"><span>Instagram</span></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-stone-100 h-full min-h-[400px]">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2673.834674751717!2d22.2997!3d48.6214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDjCsDM3JzE3LjAiTiAyMsKwMTcnNTguOSJF!5e0!3m2!1suk!2sua!4v1620000000000!5m2!1suk!2sua" width="100%" height="100%" style="border:0; min-height: 450px;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-stone-900 text-stone-300 py-12 px-6 border-t border-stone-800">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="space-y-4">
+                <h3 class="text-xl font-bold text-white flex items-center gap-2">
+                    <i class="fa-solid fa-mug-hot text-amber-500"></i> Арома
+                </h3>
+                <p class="text-sm text-stone-400">Затишна кав'ярня в Ужгороді з чудовим видом на річку Уж та смачною кавою.</p>
+            </div>
+            <div class="space-y-4">
+                <h4 class="text-lg font-semibold text-white">Контакти</h4>
+                <p class="text-sm text-stone-400"><i class="fa-solid fa-location-dot mr-2 text-amber-500"></i> Православна набережна, 21, Ужгород</p>
+                <p class="text-sm text-stone-400"><i class="fa-solid fa-phone mr-2 text-amber-500"></i> +380995666907</p>
+                <p class="text-sm text-stone-400"><i class="fa-solid fa-envelope mr-2 text-amber-500"></i> info@aroma-uzhhorod.ua</p>
+            </div>
+            <div class="space-y-4">
+                <h4 class="text-lg font-semibold text-white">Соціальні мережі</h4>
+                <div class="flex gap-4">
+                    <a href="https://www.instagram.com/aroma_uzhhorod/" target="_blank" class="w-10 h-10 rounded-full bg-stone-800 flex items-center justify-center text-amber-500 hover:bg-amber-500 hover:text-white transition">
+                        <i class="fa-brands fa-instagram text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto mt-12 pt-6 border-t border-stone-800 text-center text-xs text-stone-500">
+            &copy; 2024 Кав'ярня «Арома». Усі права захищені.
+        </div>
+    </footer>
+</body>
+</html>
